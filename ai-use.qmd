@@ -8,17 +8,18 @@ This page is a work log, not a second report. Short bullets are welcome. It is s
 
 ## Starting point
 
-**AI system and date:** Replace.
+**AI system and date:** ChatGPT (OpenAI), November 10, 2026.
 
 **Before using AI for the required extension, briefly state your question, course-based core model, baseline result, and the specific limitation or opportunity you wanted to address.**
+
+Our research question is whether NFL Combine measurements can predict if a player will be drafted in the first round. Our baseline model is logistic regression, and preliminary results suggest that slower 40-yard dash times are associated with lower odds of first-round selection. One limitation is that our initial model excluded 5,174 observations due to missing data. We also want to explore whether more complex models could improve prediction.
 
 ## Substantive prompts
 
 Paste the exact prompts that shaped the extension. Include the customized extension-selection prompt from the checkpoint and any important implementation follow-ups. Delete unused prompt blocks.
 
-> Replace with an exact prompt.
+> I am creating a regression case study in R and Quarto. Our question is how well NFL Combine measurements predict first-round draft selection. Our binary response is first-round selection, and our predictors include height, weight, position, 40-yard dash, vertical jump, broad jump, bench press, shuttle, and three-cone drill. Our baseline logistic regression suggests slower 40-yard dash times are associated with lower odds of first-round selection. We also lost 5,174 observations due to missing values. We plan to use LASSO and repeated cross-validation for our course-based analysis. Suggest three feasible extensions beyond our course methods, explain how they strengthen our project, and describe how we could independently verify them.
 
-> Replace with another exact prompt, if needed.
 
 ## My decisions
 
@@ -30,8 +31,11 @@ Paste the exact prompts that shaped the extension. Include the customized extens
 
 ## Independent verification
 
-1. **Check and result:** Replace with an official source, diagnostic, simulation, manual calculation, comparison with a known method, or another suitable check.
-2. **Check and result:** Replace with a different check and what you learned.
+1. **Planned check:** Review the official `ranger` R package documentation to confirm how random forest classification and probability predictions work.
+2. **Planned check:** Compare random forest and regression models using identical cross-validation splits and appropriate prediction metrics, such as AUC and Brier score.
+
+These checks are planned and have not yet been complete
+
 
 Link or cite verification sources where appropriate. A second AI response does not count as independent verification.
 
